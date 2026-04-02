@@ -2,7 +2,7 @@
 title: 宝宝级hy2部署教程
 published: 2025-09-27
 tags: []
-category: 教程
+category: ['教程','网络']
 permalink: "Hysteria2(hy2) 部署教程"
 draft: false
 ---
