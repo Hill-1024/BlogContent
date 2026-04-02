@@ -43,7 +43,15 @@ export const friendsData: FriendItem[] = [
         desc: "宁肯少些，也要好些",
         siteurl: "https://xihale.top/",
         tags: [],
-    }
+    },
+    {
+        id: 5,
+        title: "DayDReam",
+        imgurl: "https://dr-blog.top/images.jpg",
+        desc: "TURNING CHAOS INTO ALGORITHMS",
+        siteurl: "https://dr-blog.top",
+        tags: [],
+    },
 ];
 
 // 获取所有友情链接数据
