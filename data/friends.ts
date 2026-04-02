@@ -39,7 +39,7 @@ export const friendsData: FriendItem[] = [
     {
         id: 4,
         title: "xihale",
-        imgurl: "https://xihale.top/avatar.jpg",
+        imgurl: "https://xihale.top/_astro/avatar.DGynp9Uf_ZyoA79.webp",
         desc: "宁肯少些，也要好些",
         siteurl: "https://xihale.top/",
         tags: [],
