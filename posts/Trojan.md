@@ -6,91 +6,108 @@ category: 教程
 permalink: "Trojan部署教程"
 draft: false
 ---
+# 前言
+最近我在使用 hy2 时，发现连接总是不太稳定。  
+在[小正太rkk](https://blog.rkk.moe/) 的建议下，我决定改用 **Trojan** 来搭建代理工具，用起来确实更稳了。
 
+如果你之前看过我的 hy2 教程，会发现不少步骤是相似的。想快速上手可以直接跳到 **操作篇** 开始。
 
-# **前言**
-本来笔者在愉悦地使用hy2，然后发现总是连接不稳定\
-在我们的[小正太Rkk](https://blog.rkk.moe/)的建议下，笔者换用了Trojan来继续搭建我们的妙妙小工具
+---
 
-# **正文**
-
-以下绝大部分内容与hy2教程重复，不想看可以自行跳转到操作篇
+# 正文
 
 ## 购买篇
+首先，你需要准备一台 **VPS（Virtual Private Server，虚拟专用服务器）**。  
+挑选时请注意下面几点，避免踩坑：
 
-首先,我们需要一个[VPS](https://cloud.tencent.com/developer/techpedia/1537)\
-在选购VPS过程中应主要注意以下几点
+1. **一定要选择固定配置的 VPS**，避开那些标着“弹性配置”的套餐。
+2. **服务器位置**：推荐选**香港**或**新加坡**的节点。欧美则延迟偏高。
+3. **流量**：有些套餐不包含流量，用了额外计费。如果不确定，最好问问客服。
+4. **带宽**：建议至少 **50Mbps**，追求速度的话可选 200Mbps。
 
-1. 一定买的是VPS,固定配置的,不是什么"弹性配置"字样的
-2. 服务器位置:我们需要一个海外的服务器,建议为香港或新加坡(东京或首尔的IP易被封禁,欧美地区服务器延迟较高)
-3. 流量:部分服务商的套餐中是不包含流量的,这会带来更多的支出;如果你不确定你选择的服务商在套餐中是否包含流量,请咨询客服或者换一家服务商
-4. 带宽:擦亮眼睛看好了,带宽建议为50Mbps,富哥也可以考虑200Mbps的带宽
+### 服务商参考（国内外都有）
+- https://www.aliyun.com/product/swas?spm=a2c4g.11174283.0.0.25626284lq3elS
+- https://cloud.tencent.com/product/lighthouse
+- https://www.huaweicloud.com/special/ecs-vps.html
+- https://vm.dogyun.com/server/create（我自己在用这个）
 
-可以参考的服务商列表
+### 配置建议（按最低配来就行，亲测可用）
+- CPU：1 核
+- 内存：1 GB
+- 硬盘：20 GB
+- 带宽：50 Mbps
+- 系统：Debian 12
+- 必须要有 IPv4 公网 IP
+- IPv6（可选）
 
-* [阿里云](https://www.aliyun.com/product/swas?spm=a2c4g.11174283.0.0.25626284lq3elS)
-* [腾讯云](https://cloud.tencent.com/product/lighthouse)
-* [华为云](https://www.huaweicloud.com/special/ecs-vps.html)
-* [狗云](https://vm.dogyun.com/server/create)(本人目前使用)
+---
 
-大概配置要求(本人使用的都是按照最低来的,所以你们按最低来也没有问题)
+### 域名购买
+Trojan 必须搭配域名使用，你可以从下面这些服务商购买：
+- [Cloudflare](https://domains.cloudflare.com/zh-cn)
+- [Godaddy](https://www.godaddy.com/zh)
+- [Porkbun](https://porkbun.com/)
 
-* CPU:单核及以上
-* 内存:1G及以上
-* 硬盘:20G及以上
-* 带宽:50Mbps及以上
-* 系统:Debian12
-* IPv4公网IP
-* (可选)IPv6
+买好之后，记得把域名解析到你的 VPS IP 上哦。
 
-以及，我们Trojan需要一个域名，请寻找合适的服务商购买
-
-* [CloudFlare](https://domains.cloudflare.com/zh-cn)
-* [GoDaddy](https://www.godaddy.com/zh)
-* [PorkBun](https://porkbun.com/)
+---
 
 ## 操作篇
+购买完成后，你会得到 VPS 的 IP 地址。接下来我们一步步连接并安装。
 
-在购买完成后,你会看到你的服务器IP地址
+### 1. 连接服务器
+- 按 **Win + R**，输入 `powershell` 回车打开终端。
+- 输入以下命令（将 `用户名` 和 `IP` 换成你的）：
+  ```bash
+  ssh 用户名@你的服务器IP
+  ```
+  示例：
+  ```bash
+  ssh root@192.168.3.1
+  ```
 
-1. 接下来在键盘上按下win+R输入powershell并回车\
-   在终端里输入"ssh 你的用户名@你的服务器IP地址"并回车(输入的是双引号内的内容,不要把双引号输入进去了)\
-   例:
-   ```
-   ssh root@192.168.3.1
-   ```
+- 第一次连接会提示确认，输入 `yes` 回车。
+- 粘贴密码（输入时不显示，正常现象），回车即可登录。
 
-2. 如果是第一次链接则会询问你是否链接,根据提示输入yes并回车\
-   复制你的服务器密码并粘贴到终端,如果你发现粘贴后不显示你的密码,这是正常现象(跟你在其他地方登陆账号输密码显示\*\*\*\*是一样的目的——保密),直接回车
+### 2. 安装 Trojan
+登录成功后，依次执行下面的命令（一行一行复制粘贴，每行粘贴后按回车）：
 
-3. 接下来复制命令输入并依照指南操作(记得回车才算输入完成)
+```bash
+# 1. 更新系统并安装必要工具
+apt update -y && apt install -y curl socat
+```
 
-    1. 系统更新
-       ```
-       apt update -y && apt install -y curl && apt install -y socat
-       ```
+```bash
+# 2. 下载并运行 Trojan 安装脚本
+wget -N --no-check-certificate -q -O trojan_install.sh "https://raw.githubusercontent.com/xyz690/Trojan/master/trojan_install.sh" && chmod +x trojan_install.sh && bash trojan_install.sh
+```
 
-    2. 安装hy2
-       ```
-       wget -N --no-check-certificate -q -O trojan_install.sh "https://raw.githubusercontent.com/xyz690/Trojan/master/trojan_install.sh" && chmod +x trojan_install.sh && bash trojan_install.sh
-       ```
+### 3. 安装过程跟着指引做就行
+- 安装脚本运行后，会看到菜单。输入 **1** 回车，开始安装 Trojan。
+- 接着会让你输入**已解析的域名**，比如 `www.example.com`，输入后回车。
+- 安装完成后，可以用这个命令查看配置：
+  ```bash
+  cat /usr/src/trojan-macos/trojan/config.json
+  ```
+  **一定要记下里面的 `password`（密码）和 `port`（端口）**，后面客户端连接时需要。
 
-    3. 宝宝级指南
-       1. 按1回车->安装Trojan
-       2. 输入你解析的域名并回车,例子:```www.example.com```
-       3. 输入```cat /usr/src/trojan-macos/trojan/config.json```查看配置，记住你的密码和端口
-        
-    
-
+---
 
 ## 维护篇
-输入```systemctl status trojan.service```查看服务运行状态
+- 查看 Trojan 运行状态：
+  ```bash
+  systemctl status trojan.service
+  ```
+- 重启服务：
+  ```bash
+  systemctl restart trojan.service
+  ```
 
+---
 
-
-# <font color="#dc143c"> 免责声明 </font>
-<font color="#dc143c">
-<h3 style="color: #dc143c">笔者坚决维护中华人民共和国政府,坚持中国共产党的领导</h3>
-本教程仅供学术用途,请在获取后24小时内删除<br>
-如若有人将其投入不良用途,与本人一概无关
-</font>
+# <font color="#dc143c">免责声明</font>
+<span style="color: #dc143c; ">
+本人坚决拥护中华人民共和国政府，坚持中国共产党的领导。  
+本教程仅用于学习与科研目的，请在下载后 24 小时内删除。  
+任何人如将相关技术用于非法用途，与本人无关。  
+</span>

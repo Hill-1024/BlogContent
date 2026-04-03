@@ -7,121 +7,104 @@ permalink: "Hysteria2(hy2) 部署教程"
 draft: false
 ---
 
-
-# **这是一个开头**
-
-
-# **前言**
+## **前言**
 
 ~~本来我是想写成[MarkDown](https://markdown.com.cn/basic-syntax/)的, 但是考虑到同学们的水平, 好像还是[HTML](https://www.runoob.com/html/html-tutorial.html)比较合适, 所以我选择用HTML来写这个教程~~
 现已经将教程post到博客，拿[MarkDown](https://markdown.com.cn/basic-syntax/)再写了一遍（悲
+## 正文
 
-# **正文**
+### 常见问题解答
 
-* 问:什么是hysteria2(hy2)?\
-  答:hy2是一种新一代的代理传输协议,旨在提供高效稳定的网络连接,尤其在不稳定的网络环境中表现出色
-* 问:我们为什么要部署hy2到一个云服务器,这样做的目的是什么?\
-  答:一台海外的云服务器就像是一个中转站,代替你访问了海外的目标,并把这一切转发给你; 而你与云服务器之间的通道由hy2来实现,你通过hy2告诉云服务器你的目标,云服务器把访问后的目标通过hy2传输给你,就是这样
+**问：什么是 Hysteria2（hy2）？**  
+答：Hysteria2 是一种新一代的代理传输协议，旨在提供高效、稳定的网络连接，特别在不稳定的网络环境中表现优异。
 
-**那么我们就赶快开始我们的hy2部署之旅吧**
+**问：为什么要将 hy2 部署到云服务器？**  
+答：海外云服务器就像一个中转站，代替你访问海外资源，再将结果传回给你。而 hy2 就是连接你和服务器之间的“加密通道”——你通过它告诉服务器要访问什么，服务器完成访问后再通过它将内容传回给你。
 
-<!--more-->
+**好了，让我们开始 hy2 的部署之旅吧！**
+
+---
 
 ## 购买篇
 
-首先,我们需要一个[VPS](https://cloud.tencent.com/developer/techpedia/1537)\
-在选购VPS过程中应主要注意以下几点
+首先，你需要准备一台 **VPS（虚拟专用服务器）**。  
+选购时请注意以下几点，避免踩坑：
 
-1. 一定买的是VPS,固定配置的,不是什么"弹性配置"字样的
-2. 服务器位置:我们需要一个海外的服务器,建议为香港或新加坡(东京或首尔的IP易被封禁,欧美地区服务器延迟较高)
-3. 流量:部分服务商的套餐中是不包含流量的,这会带来更多的支出;如果你不确定你选择的服务商在套餐中是否包含流量,请咨询客服或者换一家服务商
-4. 带宽:擦亮眼睛看好了,带宽建议为50Mbps,富哥也可以考虑200Mbps的带宽
+1. **确认是固定配置的 VPS**，避开标注“弹性配置”的套餐。
+2. **服务器位置**：推荐 **香港** 或 **新加坡**。欧美地区延迟较高。
+3. **流量**：部分套餐不包含流量，会产生额外费用。不确定的话，建议咨询客服。
+4. **带宽**：建议至少 **50Mbps**，追求高速可选 200Mbps。
 
-可以参考的服务商列表
+### 推荐服务商
+- [阿里云](https://www.aliyun.com/product/swas?spm=a2c4g.11174283.0.0.25626284lq3elS)
+- [腾讯云](https://cloud.tencent.com/product/lighthouse)
+- [华为云](https://www.huaweicloud.com/special/ecs-vps.html)
+- [狗云](https://vm.dogyun.com/server/create)（我目前使用-香港）
+- [v.ps](https://v.ps)（我目前使用-东京）
 
-* [阿里云](https://www.aliyun.com/product/swas?spm=a2c4g.11174283.0.0.25626284lq3elS)
-* [腾讯云](https://cloud.tencent.com/product/lighthouse)
-* [华为云](https://www.huaweicloud.com/special/ecs-vps.html)
-* [狗云](https://vm.dogyun.com/server/create)(本人目前使用)
+### 最低配置建议
+- CPU：1 核
+- 内存：1 GB
+- 硬盘：20 GB
+- 带宽：50 Mbps
+- 系统：Debian 12
+- 必须要有 IPv4 公网 IP
+- IPv6（可选）
 
-大概配置要求(本人使用的都是按照最低来的,所以你们按最低来也没有问题)
-
-* CPU:单核及以上
-* 内存:1G及以上
-* 硬盘:20G及以上
-* 带宽:50Mbps及以上
-* 系统:Debian12
-* IPv4公网IP
-* (可选)IPv6
-
+---
 
 ## 操作篇
 
-在购买完成后,你会看到你的服务器IP地址
+购买完成后，你会获得服务器的 IP 地址。接下来我们一步步连接并安装。
 
-1. 接下来在键盘上按下win+R输入powershell并回车\
-   在终端里输入"ssh 你的用户名@你的服务器IP地址"并回车(输入的是双引号内的内容,不要把双引号输入进去了)\
-   例:
+### 1. 连接服务器
+- 按下 **Win + R**，输入 `powershell` 回车。
+- 在终端中输入以下命令（替换为你的用户名和 IP）：
+  ```bash
+  ssh 用户名@服务器IP
+  ```
+  例如：
+  ```bash
+  ssh root@192.168.3.1
+  ```
+
+- 首次连接会提示确认，输入 `yes` 回车。
+- 粘贴密码（输入时不显示，这是正常的），回车登录。
+
+### 2. 安装 Hysteria2
+登录成功后，依次执行以下命令（每行粘贴后按回车）：
+
+### 安装管理脚本依赖（只需执行一次）
+```bash
+wget -O phy2.sh https://raw.githubusercontent.com/seagullz4/hysteria2/main/phy2.sh && chmod +x phy2.sh && bash phy2.sh
+```
+
+### 安装管理脚本
+```bash
+wget -O hy2.py https://raw.githubusercontent.com/seagullz4/hysteria2/main/hysteria2.py && chmod +x hy2.py && python3 hy2.py
+```
+
+### 3. 注意事项
+
+开放防火墙端口（将第三行的 `xxx` 替换为你设置的端口）：
+   ```bash
+   iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+   iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+   iptables -I INPUT -p tcp --dport xxx -j ACCEPT
    ```
-   ssh root@192.168.3.1
-   ```
+**重要提示**：如果在电脑上使用 V2rayN 客户端，请将客户端中的限速设置为 1000Mbps，否则速度可能被限制在 100Mbps 以内。
 
-2. 如果是第一次链接则会询问你是否链接,根据提示输入yes并回车\
-   复制你的服务器密码并粘贴到终端,如果你发现粘贴后不显示你的密码,这是正常现象(跟你在其他地方登陆账号输密码显示\*\*\*\*是一样的目的——保密),直接回车
-
-3. 接下来复制命令输入并依照指南操作(记得回车才算输入完成)
-
-   1. 系统更新
-      ```
-      apt update -y && apt install -y curl && apt install -y socat
-      ```
-
-   2. 安装hy2
-      ```
-      wget -N --no-check-certificate https://raw.githubusercontent.com/flame1ce/hysteria2-install/main/hysteria2-install-main/hy2/hysteria.sh && bash hysteria.sh
-      ```
-
-   3. 宝宝级指南
-
-      1. 输入`1`->安装hy2
-      2. 输入`1`->选择必应自签证书
-      3. 输入你喜欢的端口(范围是1024到49151)并回车
-      4. 输入`1`->单端口
-      5. 设置密码并回车
-      6. 输入`www.bing.com`
-      7. 复制"hysteria2:"开头的配置链接,可以用来导入配置到客户端软件
-      8. 设置hy2服务开机自启动
-         ```
-         systemctl enable hysteria-server.service
-         ```
-      9. 开放80和443端口 把第三行的xxx换成你的端口
-         ```
-         iptables -I INPUT -p tcp --dport 80 -j ACCEPT
-         iptables -I INPUT -p tcp --dport 443 -j ACCEPT
-         iptables -I INPUT -p tcp --dport xxx -j ACCEPT
-         ```
-      10. 如果在电脑上使用V2rayN客户端,请设置限速为1000Mbps,否则会被限速至100Mbps以内
-
-
-
+---
 
 ## 维护篇
 
-在管理维护hy2时,我们使用另一套脚本\
-执行安装依赖(请执一次依赖安装在进行安装脚本)
-```
-wget -O phy2.sh https://raw.githubusercontent.com/seagullz4/hysteria2/main/phy2.sh && chmod +x phy2.sh && bash phy2.sh
-```
-执行安装脚本
-```
-wget -O hy2.py https://raw.githubusercontent.com/seagullz4/hysteria2/main/hysteria2.py && chmod +x hy2.py && python3 hy2.py
-```
-这样以后在连接上ssh后仅需输入hy2回车即可呼出脚本进行管理维护
+**以后需要管理 hy2 时**，只需 SSH 连接服务器，输入 `hy2` 回车，即可呼出管理菜单，进行查看状态、重启、修改配置等操作。
 
+---
 
-# <font color="#dc143c"> 免责声明 </font>
-<font color="#dc143c">
-<h3 style="color: #dc143c">笔者坚决维护中华人民共和国政府,坚持中国共产党的领导</h3>
-本教程仅供学术用途,请在获取后24小时内删除<br>
-如若有人将其投入不良用途,与本人一概无关
-</font>
+# <font color="#dc143c">免责声明</font>
+<span style="color: #dc143c; ">
+本人坚决拥护中华人民共和国政府，坚持中国共产党的领导。  
+本教程仅用于学习与科研目的，请在下载后 24 小时内删除。  
+任何人如将相关技术用于非法用途，与本人无关。  
+</span>
