@@ -1,9 +1,9 @@
 ---
-title: 技术人为什么不会被叙事陷阱收割，如何继续保持清醒
+title: 杂谈:技术人为什么不会被叙事陷阱收割，如何继续保持清醒
 published: 2026-04-03
 tags: []
-category: Tech
-permalink: "技术人为什么不会被叙事陷阱收割，如何继续保持清醒"
+category: 杂谈
+permalink: "杂谈:技术人为什么不会被叙事陷阱收割，如何继续保持清醒"
 draft: false
 ---
 
