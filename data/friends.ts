@@ -47,7 +47,7 @@ export const friendsData: FriendItem[] = [
     {
         id: 5,
         title: "DayDReam",
-        imgurl: "https://dr-blog.top/images.jpg",
+        imgurl: "https://dr-blog.top/assets/images.jpg",
         desc: "TURNING CHAOS INTO ALGORITHMS",
         siteurl: "https://dr-blog.top",
         tags: [],
