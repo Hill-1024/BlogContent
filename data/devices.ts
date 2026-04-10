@@ -82,4 +82,20 @@ export const devicesData: DeviceCategory = {
 			link: "https://moondroplab.com/cn/products/quark2",
 		},
 	],
+	JBL:[
+		{
+			name: "Tour Pro 3",
+			image: "/images/device/TourPro3.png",
+			specs: "11mm 动圈单元 + 动铁单元",
+			description: "Dare To Listen.",
+			link: "https://www.jbl.com/TOUR-PRO-3.html",
+		},
+		{
+			name: "TUNE 130NC TWS",
+			image: "/images/device/130NC.png",
+			specs: "10mm 动圈单元",
+			description: "Pure Bass.",
+			link: "https://www.jbl.com/TUNE130NCTWS-.html",
+		},
+	],
 };
