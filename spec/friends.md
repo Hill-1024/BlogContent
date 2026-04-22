@@ -1,7 +1,7 @@
 <h1>↑这是我非常好的朋友们</h1>
 
 :::tip[添加我到你的友链]
-欢迎各位小伙伴与我交换友链，你可以直接点击右侧按钮复制我的信息：
+欢迎与我交换友链
 :::
 
 <div class="not-prose my-6 w-full border border-black/10 dark:border-white/10 rounded-2xl p-5 sm:p-6 bg-gradient-to-br from-black/[0.01] to-black/[0.04] dark:from-white/[0.01] dark:to-white/[0.04] shadow-sm">
