@@ -3,8 +3,9 @@ title: Mizuki 简易指南
 published: 2024-04-01
 description: "如何使用此博客模板"
 image: "./cover.png"
-tags: ["Mizuki", "博客", "自定义"]
+tags: [Mizuki, 博客, 教程]
 category: 指南
+permalink: "mizuki简易指南"
 draft: true
 ---
 

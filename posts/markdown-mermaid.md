@@ -3,8 +3,9 @@ title: Markdown Mermaid 图表指南
 published: 2023-10-01
 pinned: false
 description: 一篇包含 Mermaid 图表的 Markdown 博客文章示例。
-tags: [Markdown, 博客, Mermaid]
+tags: [Markdown, Mermaid, 示例]
 category: 示例
+permalink: "markdown-mermaid图表指南"
 draft: true
 ---
 # Markdown 中使用 Mermaid 图表的完整指南

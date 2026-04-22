@@ -1,8 +1,9 @@
 ---
 title: Draft Example
 published: 2022-07-01
-tags: [Markdown, Blogging, Demo]
+tags: [Markdown, 示例]
 category: Examples
+permalink: "draft-example"
 draft: true
 ---
 

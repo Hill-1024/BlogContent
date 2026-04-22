@@ -4,8 +4,9 @@ published: 2025-12-18
 description: 记第一次课设
 alias: "社团活动管理系统"
 image: "./amy.jpeg"
-tags: [ ]
+tags: [项目, 课设]
 category: "大学课设"
+permalink: "课设-社团活动管理系统"
 draft: false
 ---
 

@@ -1,9 +1,10 @@
 ---
 title: 杂谈:对人工智能祛魅
 published: 2026-03-14
-tags: ['杂谈']
+tags: [杂谈, 思考, AI]
 category: '杂谈'
 author: Hill
+permalink: "对人工智能祛魅"
 draft: false
 ---
 

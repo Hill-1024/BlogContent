@@ -2,8 +2,9 @@
 title: 'Monet-Color'
 published: 2026-02-22
 description: 一个实现莫奈取色的Capacitor插件
-tags: ['Capacitor']
+tags: [项目, Capacitor]
 category: '项目'
+permalink: "monet-color项目"
 draft: false
 ---
 # 项目链接
