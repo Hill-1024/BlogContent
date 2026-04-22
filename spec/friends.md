@@ -67,22 +67,18 @@
 function copyText(elementId, btn) {
     const text = document.getElementById(elementId).innerText;
     
-    navigator.clipboard.writeText(text).then(() => {
-        // 保存原来的图标
+    navigator.clipboard.writeText(text).then(function() {
         const originalHTML = btn.innerHTML;
-        // 替换为成功图标 (绿色对号)
         btn.innerHTML = '<svg class="w-4 h-4 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
         
-        // 2秒后恢复
-        setTimeout(() => {
+        setTimeout(function() {
             btn.innerHTML = originalHTML;
         }, 2000);
-    }).catch(err => {
-        console.error("复制失败", err);
-        // 可以加上一个红色的错误图标提醒
+    }).catch(function(err) {
+        console.error("copy failed", err);
         const originalHTML = btn.innerHTML;
         btn.innerHTML = '<svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
-        setTimeout(() => {
+        setTimeout(function() {
             btn.innerHTML = originalHTML;
         }, 2000);
     });
