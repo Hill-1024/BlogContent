@@ -52,6 +52,14 @@ export const friendsData: FriendItem[] = [
         siteurl: "https://dr-blog.top",
         tags: [],
     },
+    {
+        id: 6,
+        title: "今朝酒",
+        imgurl: "https://www.kesazake.top/assets/images/%E8%8A%B1%E3%82%88%E3%82%8A%E5%BC%BE%E4%B8%B8.avif",
+        desc: "你好，我是今朝酒。",
+        siteurl: "https://www.kesazake.top/",
+        tags: [],
+    },
 ];
 
 // 获取所有友情链接数据
