@@ -4,7 +4,7 @@ published: 2026-03-09
 tags: [杂谈, 思考, AI]
 category: '杂谈'
 author: Hill
-permalink: "技术叙事与需求陷阱"
+alias: "技术叙事与需求陷阱"
 draft: false
 ---
 

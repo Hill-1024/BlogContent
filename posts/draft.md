@@ -3,7 +3,7 @@ title: Draft Example
 published: 2022-07-01
 tags: [Markdown, 示例]
 category: Examples
-permalink: "draft-example"
+alias: "draft-example"
 draft: true
 ---
 

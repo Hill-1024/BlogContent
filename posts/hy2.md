@@ -3,7 +3,7 @@ title: 宝宝级hy2部署教程
 published: 2025-09-27
 tags: [Hysteria2, 代理, 教程]
 category: 教程
-permalink: "hysteria2部署教程"
+alias: "hysteria2部署教程"
 draft: false
 ---
 

@@ -6,7 +6,7 @@ description: '了解更多关于 Mizuki 中的 Markdown 功能'
 image: ''
 tags: [Markdown, 示例]
 category: '示例'
-permalink: "markdown扩展功能"
+alias: "markdown扩展功能"
 draft: true 
 ---
 

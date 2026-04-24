@@ -3,7 +3,7 @@ title: 成功从Hexo迁移到Astro
 published: 2025-11-03
 tags: [Hexo, Astro, 博客]
 category: 杂谈
-permalink: "从hexo迁移到astro"
+alias: "从hexo迁移到astro"
 draft: false
 ---
 

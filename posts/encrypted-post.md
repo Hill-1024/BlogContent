@@ -8,7 +8,6 @@ password: "123456"
 alias: "encrypted-example"
 tags: [测试, 加密]
 category: "Technology"
-permalink: "加密文章测试"
 draft: true
 ---
 

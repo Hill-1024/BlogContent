@@ -4,7 +4,7 @@ published: 2022-08-01
 description: 本文演示如何在博客文章中嵌入视频。
 tags: [视频, 示例]
 category: 示例
-permalink: "在文章中嵌入视频"
+alias: "在文章中嵌入视频"
 draft: true
 ---
 

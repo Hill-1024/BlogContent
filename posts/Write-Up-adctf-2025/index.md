@@ -4,7 +4,7 @@ published: 2025-11-28T04:40:26.381Z
 image: "./cover.png"
 tags: [CTF, WriteUp]
 category: WriteUp
-permalink: "adctf-2025-writeup"
+alias: "adctf-2025-writeup"
 draft: false
 ---
 # 前言

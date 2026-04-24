@@ -6,7 +6,7 @@ alias: "社团活动管理系统"
 image: "./amy.jpeg"
 tags: [项目, 课设]
 category: "大学课设"
-permalink: "课设-社团活动管理系统"
+alias: "课设-社团活动管理系统"
 draft: false
 ---
 

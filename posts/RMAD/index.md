@@ -3,7 +3,7 @@ title: 浅谈快速开发的不同构建方式
 published: 2026-04-03
 tags: [跨平台, 前端]
 category: Tech
-permalink: "快速开发构建方式"
+alias: "快速开发构建方式"
 draft: false
 ---
 

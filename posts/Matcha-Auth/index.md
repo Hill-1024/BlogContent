@@ -5,7 +5,7 @@ description: 一个Material Design风格的2FA验证应用
 image: icon.svg
 tags: [项目, React, Capacitor]
 category: '项目'
-permalink: "matcha-auth项目"
+alias: "matcha-auth项目"
 draft: false
 ---
 

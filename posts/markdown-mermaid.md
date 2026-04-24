@@ -5,7 +5,7 @@ pinned: false
 description: 一篇包含 Mermaid 图表的 Markdown 博客文章示例。
 tags: [Markdown, Mermaid, 示例]
 category: 示例
-permalink: "markdown-mermaid图表指南"
+alias: "markdown-mermaid图表指南"
 draft: true
 ---
 # Markdown 中使用 Mermaid 图表的完整指南
