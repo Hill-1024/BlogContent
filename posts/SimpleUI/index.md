@@ -15,8 +15,6 @@ draft: false
 
 [**Demo** ](https://simpleui-32n.pages.dev/#overview)
 
-![SimpleUI 图标](icon.png)
-
 # 为什么会有 simpleUI
 
 前面其实已经写过 hy2、Trojan，还有 Clash 聚合分流之类的东西。最开始折腾这些的时候，我的想法很简单：一台服务器，一个脚本，能跑就行。
