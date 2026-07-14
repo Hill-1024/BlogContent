@@ -1,4 +1,4 @@
-<h1>↑这是我非常好的朋友们</h1>
+<h2>这些是我常来往的朋友</h2>
 
 :::tip[添加我到你的友链]
 欢迎与我交换友链
@@ -18,41 +18,41 @@
 <!-- 姓名 -->
 <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/[0.05] dark:border-white/[0.05] hover:bg-black/[0.05] dark:hover:bg-white/[0.05] transition-colors">
 <div class="flex items-center gap-3 overflow-hidden">
-<span class="text-sm font-bold text-black/50 dark:text-white/50 w-16 shrink-0 uppercase tracking-wider">Name</span>
+<span class="text-sm font-bold text-black/50 dark:text-white/50 w-16 shrink-0 tracking-wider">名称</span>
 <span id="friend-name" class="text-sm font-medium px-2 py-1 rounded bg-[var(--primary)] text-white select-all truncate">Hill</span>
 </div>
-<button onclick="copyText('friend-name', this)" class="shrink-0 flex items-center justify-center w-8 h-8 rounded-lg bg-[var(--btn-regular-bg)] hover:bg-[var(--btn-regular-bg-hover)] active:scale-95 transition-all duration-200 text-black/70 dark:text-white/70" aria-label="Copy Name" title="复制名称">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+<button type="button" onclick="copyText('friend-name', this)" class="shrink-0 flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--btn-regular-bg)] hover:bg-[var(--btn-regular-bg-hover)] active:scale-95 transition-all duration-200 text-black/70 dark:text-white/70" aria-label="复制名称" title="复制名称">
+<iconify-icon icon="material-symbols:content-copy-rounded" width="18" height="18"></iconify-icon>
 </button>
 </div>
 <!-- 头像 -->
 <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/[0.05] dark:border-white/[0.05] hover:bg-black/[0.05] dark:hover:bg-white/[0.05] transition-colors">
 <div class="flex items-center gap-3 overflow-hidden">
-<span class="text-sm font-bold text-black/50 dark:text-white/50 w-16 shrink-0 uppercase tracking-wider">Avatar</span>
+<span class="text-sm font-bold text-black/50 dark:text-white/50 w-16 shrink-0 tracking-wider">头像</span>
 <span id="friend-avatar" class="text-sm font-medium px-2 py-1 rounded bg-[var(--primary)] text-white select-all truncate">https://mutsumi.moe/assets/home/avatar.jpg</span>
 </div>
-<button onclick="copyText('friend-avatar', this)" class="shrink-0 flex items-center justify-center w-8 h-8 rounded-lg bg-[var(--btn-regular-bg)] hover:bg-[var(--btn-regular-bg-hover)] active:scale-95 transition-all duration-200 text-black/70 dark:text-white/70" aria-label="Copy Avatar" title="复制头像链接">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+<button type="button" onclick="copyText('friend-avatar', this)" class="shrink-0 flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--btn-regular-bg)] hover:bg-[var(--btn-regular-bg-hover)] active:scale-95 transition-all duration-200 text-black/70 dark:text-white/70" aria-label="复制头像链接" title="复制头像链接">
+<iconify-icon icon="material-symbols:content-copy-rounded" width="18" height="18"></iconify-icon>
 </button>
 </div>
 <!-- 网址 -->
 <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/[0.05] dark:border-white/[0.05] hover:bg-black/[0.05] dark:hover:bg-white/[0.05] transition-colors">
 <div class="flex items-center gap-3 overflow-hidden">
-<span class="text-sm font-bold text-black/50 dark:text-white/50 w-16 shrink-0 uppercase tracking-wider">URL</span>
+<span class="text-sm font-bold text-black/50 dark:text-white/50 w-16 shrink-0 tracking-wider">网址</span>
 <span id="friend-url" class="text-sm font-medium px-2 py-1 rounded bg-[var(--primary)] text-white select-all truncate">https://mutsumi.moe</span>
 </div>
-<button onclick="copyText('friend-url', this)" class="shrink-0 flex items-center justify-center w-8 h-8 rounded-lg bg-[var(--btn-regular-bg)] hover:bg-[var(--btn-regular-bg-hover)] active:scale-95 transition-all duration-200 text-black/70 dark:text-white/70" aria-label="Copy URL" title="复制博客链接">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+<button type="button" onclick="copyText('friend-url', this)" class="shrink-0 flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--btn-regular-bg)] hover:bg-[var(--btn-regular-bg-hover)] active:scale-95 transition-all duration-200 text-black/70 dark:text-white/70" aria-label="复制博客链接" title="复制博客链接">
+<iconify-icon icon="material-symbols:content-copy-rounded" width="18" height="18"></iconify-icon>
 </button>
 </div>
 <!-- 简介 -->
 <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/[0.05] dark:border-white/[0.05] hover:bg-black/[0.05] dark:hover:bg-white/[0.05] transition-colors">
 <div class="flex items-center gap-3 overflow-hidden">
-<span class="text-sm font-bold text-black/50 dark:text-white/50 w-16 shrink-0 uppercase tracking-wider">Desc</span>
+<span class="text-sm font-bold text-black/50 dark:text-white/50 w-16 shrink-0 tracking-wider">简介</span>
 <span id="friend-desc" class="text-sm font-medium px-2 py-1 rounded bg-[var(--primary)] text-white select-all truncate">Just Forward</span>
 </div>
-<button onclick="copyText('friend-desc', this)" class="shrink-0 flex items-center justify-center w-8 h-8 rounded-lg bg-[var(--btn-regular-bg)] hover:bg-[var(--btn-regular-bg-hover)] active:scale-95 transition-all duration-200 text-black/70 dark:text-white/70" aria-label="Copy Description" title="复制简介">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+<button type="button" onclick="copyText('friend-desc', this)" class="shrink-0 flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--btn-regular-bg)] hover:bg-[var(--btn-regular-bg-hover)] active:scale-95 transition-all duration-200 text-black/70 dark:text-white/70" aria-label="复制简介" title="复制简介">
+<iconify-icon icon="material-symbols:content-copy-rounded" width="18" height="18"></iconify-icon>
 </button>
 </div>
 </div>
@@ -63,14 +63,14 @@ function copyText(elementId, btn) {
 const text = document.getElementById(elementId).innerText;
 navigator.clipboard.writeText(text).then(function() {
 const originalHTML = btn.innerHTML;
-btn.innerHTML = '<svg class="w-4 h-4 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+btn.innerHTML = '<iconify-icon icon="material-symbols:check-rounded" width="20" height="20" class="text-green-600 dark:text-green-400"></iconify-icon>';
 setTimeout(function() {
 btn.innerHTML = originalHTML;
 }, 2000);
 }).catch(function(err) {
 console.error("copy failed", err);
 const originalHTML = btn.innerHTML;
-btn.innerHTML = '<svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+btn.innerHTML = '<iconify-icon icon="material-symbols:close-rounded" width="20" height="20" class="text-red-500"></iconify-icon>';
 setTimeout(function() {
 btn.innerHTML = originalHTML;
 }, 2000);
