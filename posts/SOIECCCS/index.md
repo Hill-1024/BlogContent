@@ -1,12 +1,12 @@
 ---
-title: SOIECCCS
+title: 腾讯开悟人工智能比赛总结
 published: 2026-08-22
 description: 参加腾讯开悟人工智能比赛的总结和项目回顾
 tags: [Agent]
 category: 比赛总结
 alias: "腾讯开悟人工智能比赛总结"
 draft: false
-cover: ./wuxi.jpg
+image: miku.jpeg
 ---
 
 # 感慨
@@ -37,9 +37,9 @@ cover: ./wuxi.jpg
 
 以下仓库自即日起停止维护：
 
-::github{repo="hill-1024/lawyance/lawver"}
-::github{repo="hill-1024/lawyance-intro"}
-::github{repo="hill-1024/lawyance-rust"}
+::github{repo="Hill-1024/Lawyance/tree/lawver"}
+::github{repo="Hill-1024/Lawyance_Intro"}
+::github{repo="Hill-1024/lawyance-rust"}
 
 # 结语
 

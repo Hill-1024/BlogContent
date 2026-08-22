@@ -2,12 +2,12 @@
 // 用于管理友情链接页面的数据
 
 export interface FriendItem {
-	id: number;
-	title: string;
-	imgurl: string;
-	desc: string;
-	siteurl: string;
-	tags: string[];
+    id: number;
+    title: string;
+    imgurl: string;
+    desc: string;
+    siteurl: string;
+    tags: string[];
 }
 
 // 友情链接数据
@@ -31,7 +31,7 @@ export const friendsData: FriendItem[] = [
     {
         id: 3,
         title: "GamerNoTitle",
-        imgurl:"https://assets.bili33.top/img/AboutMe/logo-mini.png",
+        imgurl: "https://assets.bili33.top/img/AboutMe/logo-mini.png",
         desc: "TECH OTAKUS SAVE THE WORLD",
         siteurl: "https://bili33.top",
         tags: [],
@@ -47,7 +47,7 @@ export const friendsData: FriendItem[] = [
     {
         id: 5,
         title: "DayDReam",
-        imgurl: "https://dr-blog.top/assets/images.jpg",
+        imgurl: "https://dr-blog.top/assets/images/images.jpg",
         desc: "TURNING CHAOS INTO ALGORITHMS",
         siteurl: "https://dr-blog.top",
         tags: [],
@@ -64,16 +64,16 @@ export const friendsData: FriendItem[] = [
 
 // 获取所有友情链接数据
 export function getFriendsList(): FriendItem[] {
-	return friendsData;
+    return friendsData;
 }
 
 // 获取随机排序的友情链接数据
 export function getShuffledFriendsList(): FriendItem[] {
-	let shuffled = [...friendsData];
-	for (let i = shuffled.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
-		[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-	}
+    let shuffled = [...friendsData];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
     //shuffled.push({id: 0,title: "Hill",imgurl: "https://blog.hill-q.com/assets/home/avatar.jpg",desc:"Just Foward",siteurl:"https://blog.hill-q.com",tags: []})
-	return shuffled;
+    return shuffled;
 }
