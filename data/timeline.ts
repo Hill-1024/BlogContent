@@ -33,12 +33,30 @@ export const timelineData: TimelineItem[] = [
         startDate: "2025-09-01",
         location: "GuangZhou",
         organization: "GDUT",
-        skills: ["Cpp","C"],
+        skills: ["Cpp", "C"],
         achievements: [
             "",
         ],
         icon: "material-symbols:school",
         color: "#059669",
+        featured: true,
+    },
+    {
+        id: "Lawyance",
+        title: "Lawyance法律智能体",
+        description:
+            "中国大学生服务外包创新创业大赛暨2026腾讯开悟人工智能全球公开赛参赛作品",
+        type: "project",
+        startDate: "2026-04-15",
+        endDate: "2026-08-22",
+        organization: "工大法智团队",
+        skills: ["Agent", "LLM", "Python"],
+        achievements: [
+            "长沙中部赛区决赛一等奖",
+            "无锡全国决赛二等奖"
+        ],
+        icon: "octicon:law",
+        color: "#3B62B8",
         featured: true,
     },
 ];
