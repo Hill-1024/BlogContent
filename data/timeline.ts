@@ -47,7 +47,7 @@ export const timelineData: TimelineItem[] = [
         description:
             "中国大学生服务外包创新创业大赛暨2026腾讯开悟人工智能全球公开赛参赛作品",
         type: "project",
-        startDate: "2026-04-15",
+        startDate: "2026-03-15",
         endDate: "2026-08-22",
         organization: "工大法智团队",
         skills: ["Agent", "LLM", "Python"],
