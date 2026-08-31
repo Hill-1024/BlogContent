@@ -342,7 +342,7 @@ export const devicesData: DeviceCollection = {
 			name: "云之境",
 			image: "/images/device/qoa.jpg",
 			category: "耳机",
-			description: "",
+			description: "Sound Above the Clouds.",
 			link: "https://qoa-audio.com/",
 			specs: [
 				{
