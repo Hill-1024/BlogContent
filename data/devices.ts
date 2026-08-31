@@ -121,7 +121,7 @@ export const devicesData: DeviceCollection = {
 	Microsoft: [
 		{
 			name: "Surface Pro 3",
-			image: "https://surfacetip.com/wp-content/uploads/2016/08/device-surface-pro-3-e1471925568336.png",
+			image: "/images/device/surface.png",
 			category: "平板电脑",
 			description: "The Original Hybrid.",
 			link: "https://support.microsoft.com/zh-cn/surface/surface-pro-3-%E8%A7%84%E6%A0%BC%E5%92%8C%E5%8A%9F%E8%83%BD-4c142a41-134f-f22b-0142-a5cf073b56ee3",
@@ -332,6 +332,32 @@ export const devicesData: DeviceCollection = {
 				{
 					label: "品牌",
 					value: "JBL",
+					icon: "mdi:earbuds-outline",
+				},
+			],
+		},
+	],
+	QoA: [
+		{
+			name: "云之境",
+			image: "/images/device/qoa.jpg",
+			category: "耳机",
+			description: "",
+			link: "https://qoa-audio.com/",
+			specs: [
+				{
+					label: "类别",
+					value: "入耳式有线",
+					icon: "material-symbols:earbuds-2-outline-rounded",
+				},
+				{
+					label: "单元类型",
+					value: "动圈 + 平板",
+					icon: "material-symbols:graphic-eq-rounded",
+				},
+				{
+					label: "品牌",
+					value: "Queen of Audio",
 					icon: "mdi:earbuds-outline",
 				},
 			],
