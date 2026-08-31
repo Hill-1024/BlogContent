@@ -175,7 +175,7 @@ export const devicesData: DeviceCollection = {
 				{
 					label: "品牌",
 					value: "MOONDROP",
-					icon: "material-symbols:headphones-rounded",
+					icon: "mdi:earbuds-outline",
 				},
 			],
 		},
@@ -291,9 +291,14 @@ export const devicesData: DeviceCollection = {
 					icon: "material-symbols:straighten-rounded",
 				},
 				{
-					label: "连接",
-					value: "Bluetooth",
-					icon: "material-symbols:bluetooth-rounded",
+					label: "降噪",
+					value: "主动降噪",
+					icon: "material-symbols:noise-control-off-rounded",
+				},
+				{
+					label: "品牌",
+					value: "JBL",
+					icon: "mdi:earbuds-outline",
 				},
 			],
 		},
@@ -323,6 +328,11 @@ export const devicesData: DeviceCollection = {
 					label: "降噪",
 					value: "主动降噪",
 					icon: "material-symbols:noise-control-off-rounded",
+				},
+				{
+					label: "品牌",
+					value: "JBL",
+					icon: "mdi:earbuds-outline",
 				},
 			],
 		},

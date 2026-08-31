@@ -34,9 +34,6 @@ export const timelineData: TimelineItem[] = [
         location: "GuangZhou",
         organization: "GDUT",
         skills: ["Cpp", "C"],
-        achievements: [
-            "",
-        ],
         icon: "material-symbols:school",
         color: "#059669",
         featured: true,
