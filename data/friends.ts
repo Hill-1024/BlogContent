@@ -18,7 +18,7 @@ export const friendsData: FriendItem[] = [
         imgurl: "https://avatars.githubusercontent.com/u/59642397?v=4",
         desc: "時雨繋ぎ、時暮灯し",
         siteurl: "https://keqing.moe",
-        tags: [],
+        tags: ["A&D", "PLT", "AutoLang"],
     },
     {
         id: 2,
@@ -26,7 +26,7 @@ export const friendsData: FriendItem[] = [
         imgurl: "https://blog.rkk.moe/images/profile.webp",
         desc: "Ricky 的各种日常捏",
         siteurl: "https://blog.rkk.moe/",
-        tags: [],
+        tags: ["A&D"],
     },
     {
         id: 3,
@@ -34,7 +34,7 @@ export const friendsData: FriendItem[] = [
         imgurl: "https://assets.bili33.top/img/AboutMe/logo-mini.png",
         desc: "TECH OTAKUS SAVE THE WORLD",
         siteurl: "https://bili33.top",
-        tags: [],
+        tags: ["A&D"],
     },
     {
         id: 4,
@@ -50,7 +50,7 @@ export const friendsData: FriendItem[] = [
         imgurl: "https://dr-blog.top/assets/images/images.jpg",
         desc: "TURNING CHAOS INTO ALGORITHMS",
         siteurl: "https://dr-blog.top",
-        tags: [],
+        tags: ["A&D"],
     },
     {
         id: 6,
@@ -58,7 +58,15 @@ export const friendsData: FriendItem[] = [
         imgurl: "https://www.kesazake.top/assets/images/%E8%8A%B1%E3%82%88%E3%82%8A%E5%BC%BE%E4%B8%B8.avif",
         desc: "你好，我是今朝酒。",
         siteurl: "https://www.kesazake.top/",
-        tags: [],
+        tags: ["A&D"],
+    },
+    {
+        id: 7,
+        title: "L1nSn0w",
+        imgurl: "https://sn0w.fyi/assets/avatar-mark-B2LTjFKG.png",
+        desc: "无限进步",
+        siteurl: "https://blog.sn0w.fyi",
+        tags: ["dify"],
     },
 ];
 
