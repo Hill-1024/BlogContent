@@ -37,7 +37,7 @@ image: miku.jpeg
 
 以下仓库自即日起停止维护：
 
-::github{repo="Hill-1024/Lawyance/tree/lawver"}
+::github{repo="Hill-1024/Lawyance"}
 ::github{repo="Hill-1024/Lawyance_Intro"}
 ::github{repo="Hill-1024/lawyance-rust"}
 
