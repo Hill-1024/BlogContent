@@ -9,8 +9,6 @@ alias: "AgentlyMem项目"
 draft: false
 ---
 
-![icon](icon.svg)
-
 # 项目链接
 
 ::github{repo="GDUTMeow/AgentlyMem"}
