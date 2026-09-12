@@ -59,6 +59,18 @@ export const projectsData: Project[] = [
         tags: [],
     },
     {
+        id: "agentlymem",
+        title: "AgentlyMem",
+        description: "面向 Agent 的向量化键值映射记忆系统",
+        image: "/images/projects/sakura.jpg",
+        category: "other",
+        techStack: ["TypeScript", "Node.js", "Fastify", "SQLite"],
+        status: "in-progress",
+        sourceCode: "https://github.com/GDUTMeow/AgentlyMem",
+        startDate: "2026-08-14",
+        tags: ["Agent", "Memory", "Vector"],
+    },
+    {
         id: "Monet-Color-For-Capacitor",
         title: "Monet-Color-For-Capacitor",
         description: "一个Capacitor插件,实现了获取Android12+系统的莫奈取色",
