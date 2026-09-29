@@ -68,6 +68,14 @@ export const friendsData: FriendItem[] = [
         siteurl: "https://blog.sn0w.fyi",
         tags: ["dify"],
     },
+    {
+        id: 8,
+        title: "Yulabu",
+        imgurl: "https://blog.yulabu.cn/_astro/Personal_img.DHhqemdM.webp",
+        desc: "spicy fish!",
+        siteurl: "https://blog.yulabu.cn",
+        tags: [],
+    },
 ];
 
 // 获取所有友情链接数据
