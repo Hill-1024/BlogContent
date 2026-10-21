@@ -76,6 +76,15 @@ export const friendsData: FriendItem[] = [
         siteurl: "https://blog.yulabu.cn",
         tags: [],
     },
+    {
+        id: 9,
+        title: "锦木祈杰のblog",
+        imgurl: "https://oss.qijieya.cn/1/hutao_hai.gif",
+        desc: "敬....不完美的明天。",
+        siteurl: "https://qijieya.cn/",
+        tags: [],
+    },
+    },
 ];
 
 // 获取所有友情链接数据
