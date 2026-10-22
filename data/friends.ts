@@ -84,7 +84,6 @@ export const friendsData: FriendItem[] = [
         siteurl: "https://qijieya.cn/",
         tags: [],
     },
-    },
 ];
 
 // 获取所有友情链接数据
