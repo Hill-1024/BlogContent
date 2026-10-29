@@ -63,7 +63,7 @@ export const friendsData: FriendItem[] = [
     {
         id: 7,
         title: "L1nSn0w",
-        imgurl: "https://sn0w.fyi/assets/avatar-mark-B2LTjFKG.png",
+        imgurl: "https://avatars.githubusercontent.com/u/99076044?v=4",
         desc: "无限进步",
         siteurl: "https://blog.sn0w.fyi",
         tags: ["dify"],
