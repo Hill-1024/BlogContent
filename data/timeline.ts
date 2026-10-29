@@ -32,11 +32,11 @@ export const timelineData: TimelineItem[] = [
         type: "education",
         startDate: "2025-09-01",
         location: "GuangZhou",
-        organization: "GDUT",
+        organization: "GuangDong University of Technology",
         skills: ["Cpp", "C"],
         icon: "material-symbols:school",
-        color: "#059669",
-        featured: true,
+        color: "#9e0f0fff",
+        featured: false,
     },
     {
         id: "Lawyance",
@@ -54,8 +54,22 @@ export const timelineData: TimelineItem[] = [
         ],
         icon: "octicon:law",
         color: "#3B62B8",
+        featured: false,
+    },
+    {
+        id: "Tencent",
+        title: "腾讯实习",
+        description:
+            "CSIG云与智慧产业事业群",
+        type: "work",
+        startDate: "2026-10-15",
+        organization: "Tencent",
+        skills: ["全栈", "Agent"],
+        icon: "thesvg:tencent",
+        color: "#0052D9",
         featured: true,
     },
+
 ];
 
 // Get timeline statistics
