@@ -55,7 +55,7 @@ export const friendsData: FriendItem[] = [
     {
         id: 6,
         title: "今朝酒",
-        imgurl: "https://www.kesazake.top/assets/images/%E8%8A%B1%E3%82%88%E3%82%8A%E5%BC%BE%E4%B8%B8.avif",
+        imgurl: "https://avatars.githubusercontent.com/u/140333531?v=4",
         desc: "你好，我是今朝酒。",
         siteurl: "https://www.kesazake.top/",
         tags: ["A&D"],
@@ -82,6 +82,22 @@ export const friendsData: FriendItem[] = [
         imgurl: "https://oss.qijieya.cn/1/hutao_hai.gif",
         desc: "敬....不完美的明天。",
         siteurl: "https://qijieya.cn/",
+        tags: [],
+    },
+    {
+        id: 10,
+        title: "KdRefrain",
+        imgurl: "https://kdrefrain.top/img/CreatorAvatar.webp",
+        desc: "KDR 的秘境图书馆",
+        siteurl: "https://kdrefrain.top/",
+        tags: [],
+    },
+    {
+        id: 11,
+        title: "Keronshans",
+        imgurl: "https://keronshans.top/avatar.jpg",
+        desc: "这里是一直会打字的小猫...",
+        siteurl: "https://keronshans.top/",
         tags: [],
     },
 ];
